@@ -4,3 +4,8 @@
     margin-top: 47px;
     margin-bottom: 47px;
 }
+
+.container-fluid {
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
