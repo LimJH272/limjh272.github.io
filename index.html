@@ -13,36 +13,50 @@
     <body>
         <nav id="navigation-bar" class="navbar hstack gap-1 bg-light fixed-top">
             <ul class="nav">
-                <li class="nav-item"><a href="./" class="nav-link text-black fw-semibold">Lim Jie Han's Personal Portfolio</a></li>
+                <li class="nav-item"><a href="./" class="nav-link text-black fw-semibold">Lim Jie Han's Portfolio</a></li>
             </ul>
             <ul class="nav">
-                <li class="nav-item"><a href="#" class="nav-link active text-black">Projects</a></li>
+                <li class="nav-item"><a href="./projects.html" class="nav-link active text-black">My Projects</a></li>
             </ul>
         </nav>
 
         <!--Dummy navbar to pad page content-->
         <nav id="dummy" class="navbar">
             <ul class="nav">
-                <li class="nav-item"><a href="#" class="nav-link">Hey you have found me!</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Congratulations, you have found me! Here is a cookie!</a></li>
             </ul>
         </nav>
 
-        <div class="container-fluid py-4 text-center" id="title">
-            <h1>Lim Jie Han's Personal Portfolio</h1>
+        <div class="container-fluid py-4 text-center" id="welcome">
+            <h1>Lim Jie Han's Portfolio</h1>
             <p>Welcome to my personal portfolio site!</p>
         </div>
 
-        <div class="container py-2" id="projects">
-            <h2>Projects I Have Worked On</h2>
-            <ul>
-                <li><a href="https://github.com/LimJH272/Orientation2022" target="_blank">SUTD Orientation 2022 Official Website</a></li>
-                <li>OccupEye (50.001 1D Project Group 2B) </li>
-                <li>B3S (50.002 1D Project Group 9)</li>
-            </ul>
-        </div>
+        <div class="container py-1" id="about-me">
+            <h2>About Me</h2>
 
-        <div class="container-fluid py-1 hstack gap-3">
-
+            <div class="row">
+                <div id="photo" class="col-md-4 justify-content-center d-flex">
+                    <img src="./LJH 24-3-23.jpg" alt="Lim Jie Han's profile photo" id="profile-photo" class="img-fluid img-thumbnail">
+                </div>
+                <div id="personal-info" class="col-md-8 text-start">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <div class="ms-2 me-auto">
+                                <div class="fw-bold">Education</div>
+                                2021 - Present: Computer Science and Design, SUTD, Singapore (CGPA 4.85)<br>
+                                2020 - 2021: CAIE A-Levels, Sunway College Kuala Lumpur, Malaysia (4A*)
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="ms-2 me-auto">
+                                <div class="fw-bold">Hello</div>
+                                hello
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </body>
 </html>
