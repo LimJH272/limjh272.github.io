@@ -1,3 +1,8 @@
+#introduction {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
 #disabled-buttons {
     color: rgba(0,0,0,0.3)!important;
 }
