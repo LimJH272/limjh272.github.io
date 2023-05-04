@@ -1,7 +1,7 @@
-#btn-archistyle {
+#disabled-buttons {
     color: rgba(0,0,0,0.3)!important;
 }
 
-#btn-archistyle::after {
+#disabled-buttons::after {
     display: none;
 }
