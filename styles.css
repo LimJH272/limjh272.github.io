@@ -1,3 +1,7 @@
+#profile-photo {
+    max-height: 465px!important
+}
+
 #introduction {
     text-align: justify;
     text-justify: inter-word;
