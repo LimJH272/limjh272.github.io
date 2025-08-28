@@ -1,3 +1,4 @@
 title: Lim Jie Han
 logo: /assets/LJH_headshot.jpg
-theme: jekyll-theme-minima
+# theme: jekyll-theme-minimal
+theme: minima
