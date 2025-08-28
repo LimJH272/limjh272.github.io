@@ -1,4 +1,4 @@
-# About Me
+![Me](/assets/LJH_headshot.jpg)
 
 # Education
 **BEng (Hons)** in Computer Science and Design, Singapore University of Technology and Design | *Sept 2021 - May 2025*
