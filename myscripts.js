@@ -11,7 +11,7 @@ const age = setInterval(function() {
         document.querySelector("#birthday").classList.remove("text-primary");
     }
 
-    const birth_time = birth_date.get.getTime();
+    const birth_time = birth_date.getTime();
     const current_time = current_date.getTime();
     const diff = current_time - birth_time;
     const year_diff = diff / (1000*60*60*24*365.25);
