@@ -1,0 +1,6 @@
+# Local Jekyll server
+Gemfile
+Gemfile.lock
+_site/
+.jekyll-cache/
+.sass-cache/
