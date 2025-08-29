@@ -1,9 +1,10 @@
 ---
 layout: default
+permalink: /test/
 ---
 
 # About Me
-I am a Class of 2025 Bachelor's graduate from the Singapore University of Technology and Design (SUTD) under the Information Systems Technology and Design (ISTD) pillar. My interest in coding and programming has driven my systematic thinking and project planning skills that allow me to constantly update myself with concepts and skills from the past, present and future. Being highly interested in artificial intelligence (AI), I have worked with different large language models (LLMs) during my part-time internship at GenVoice as a machine learning (ML) researcher, and I am currently taking courses on computer vision and natural language processing in SUTD.
+I am a Class of 2025 Bachelor's graduate from the Singapore University of Technology and Design (SUTD) under the Information Systems Technology and Design (ISTD) pillar. My interest in coding and programming has driven my systematic thinking and project planning skills that allow me to constantly update myself with concepts and skills from the past, present and future. Being highly interested in artificial intelligence (AI), I have worked with different large language models (LLMs) during my part-time internship at GenVoice as a machine learning (ML) researcher, and I have diverse project experiences in ML, AI, deep learning, data science and computer science.
 
 I take pride in diligence, empathy, persistence, punctuality and hard work. My experience of being a teaching assistant for mathematics and ML has further fueled my passion in empowering others through teaching and learning. As a University Ambassador, I do my very best to uplift SUTD's name and pride as a distinguished education institution. I am also active in extra-curricular activities and participate in various student clubs in my free time.
 
