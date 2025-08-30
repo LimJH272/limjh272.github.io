@@ -1,3 +1,14 @@
+footer {
+    display: block;
+    padding: 20px;
+    background-color:#eeeeee;
+    min-height: 150px;
+}
+
+#main-content {
+    padding: 30px;
+}
+
 #profile-photo {
     max-height: 465px!important
 }
@@ -14,3 +25,4 @@
 #disabled-buttons::after {
     display: none;
 }
+
