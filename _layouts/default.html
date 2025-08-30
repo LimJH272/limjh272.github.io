@@ -65,27 +65,17 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col">
-                                <div class="col p-10">
-                                    <a href="https://www.linkedin.com/in/limjiehan0272/" target="_blank">LinkedIn</a>
+                        {% if site.data.contacts[0] %}
+                            {% for contact in site.data.contacts %}
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="col p-10">
+                                            <a href="{{contact.link}}" target="_blank">{{contact.name}}</a>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col">
-                                <div class="col p-10">
-                                    <a href="https://github.com/LimJH272" target="_blank">GitHub</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col">
-                                <div class="col p-10">
-                                    <a href="mailto://limjiehan02@gmail.com" target="_blank">Email</a>
-                                </div>
-                            </div>
-                        </div>
+                            {% endfor %}
+                        {% endif %}
                     </div>
                 </div>
             </div>
