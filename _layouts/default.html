@@ -25,25 +25,12 @@
 
     <body>
         <!-- Navbar -->
-        <nav id="navigation-bar" class="navbar hstack gap-1 bg-dark fixed-top">
-            <ul class="nav">
-                <li class="nav-item"><a href="/" class="nav-link text-white fw-semibold">Lim Jie Han's Portfolio</a></li>
-            </ul>
-            <ul class="nav">
-                <li class="nav-item"><a href="/projects/" class="nav-link active text-white">Projects</a></li>
-            </ul>
-        </nav>
+        {% include nav.html fixed=true %}
 
         <!--Duplicate navbar to align page content-->
-        <nav id="navigation-bar-dupe" class="navbar hstack gap-1 bg-dark">
-            <ul class="nav">
-                <li class="nav-item"><a href="/" class="nav-link text-white fw-semibold">Lim Jie Han's Portfolio</a></li>
-            </ul>
-            <ul class="nav">
-                <li class="nav-item"><a href="/projects/" class="nav-link active text-white">Projects</a></li>
-            </ul>
-        </nav>
+        {% include nav.html %}
 
+        <!-- Main content -->
         <div id="main-content">
             {{content}}
         </div>
