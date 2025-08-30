@@ -45,24 +45,24 @@
                         </div>
                     </div>
                     {% if site.data.contacts[0] %}
-                        <div class="col col-md-4">
-                            <div class="row">
-                                <div class="col">
-                                    <div class="col p-20">
-                                        <h4>Connect via:</h4>
-                                    </div>
+                    <div class="col col-md-4">
+                        <div class="row">
+                            <div class="col">
+                                <div class="col p-20">
+                                    <h4>Connect via:</h4>
                                 </div>
                             </div>
-                            {% for contact in site.data.contacts %}
-                                <div class="row">
-                                    <div class="col">
-                                        <div class="col p-10">
-                                            <a class="text-black-50" href="{{contact.link}}" target="_blank">{{contact.name}}</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            {% endfor %}
                         </div>
+                        {% for contact in site.data.contacts %}
+                        <div class="row">
+                            <div class="col">
+                                <div class="col p-10">
+                                    <a class="text-black-50" href="{{contact.link}}" target="_blank">{{contact.name}}</a>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
                     {% endif %}
                 </div>
             </div>

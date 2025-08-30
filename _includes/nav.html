@@ -1,8 +1,32 @@
-<nav id="navigation-bar" class="navbar hstack gap-1 bg-dark{% if include.fixed %} fixed-top{% endif %}">
-    <ul class="nav">
-        <li class="nav-item"><a href="/" class="nav-link text-white fw-semibold">Lim Jie Han's Portfolio</a></li>
-    </ul>
-    <ul class="nav">
-        <li class="nav-item"><a href="/projects/" class="nav-link active text-white">Projects</a></li>
-    </ul>
+<nav class="navbar navbar-expand-md navbar-dark bg-dark{% if include.fixed %} fixed-top{% endif %}">
+    <div class="container-fluid">
+        <a href="/" class="navbar-brand">Lim Jie Han's Portfolio</a>
+        {% if site.data.navigation[0] %}
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ms-auto">
+                {% for p in site.data.navigation %}
+                <li class="nav-item">
+                    <a class="nav-link text-center{% if page.title == p.title %} active{% endif %}"{% if page.title == p.title %} aria-current="page"{% endif %} href="{{p.permalink}}">{{p.title}}</a>
+                </li>
+                {% endfor %}
+                <!-- <li class="nav-item">
+                    <a class="nav-link disabled text-white-50">Disabled</a>
+                </li> -->
+                <!-- <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Dropdown link
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </li> -->
+            </ul>
+        </div>
+        {% endif %}
+    </div>
 </nav>
