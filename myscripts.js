@@ -14,6 +14,8 @@ if (bdayElement !== null && ageElement !== null) {
 
     // Highlight if today is my birthday
     if ((birthDate.getDate() == currDate.getDate()) && (birthDate.getMonth() == currDate.getMonth())) {
-            bdayElement.classList.add("text-primary");
+        bdayElement.classList.add("text-success");
+    } else {
+        bdayElement.classList.remove("text-success");
     }
 }
