@@ -7,250 +7,60 @@ page-title: My Projects
 page-subtitle: Projects that I have worked on previously / working on now
 ---
 
+{% if site.data.projects[0] %}
 <div class="container" id="projects">
     <div class="accordion accordion-flush" id="accordion-projects">
+        {% for project_data in site.data.projects %}
         <div class="accordion-item">
             <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#orientation-2022" aria-expanded="false" aria-controls="orientation-2022">
-                    SUTD Freshmen Orientation 2022 Official Website
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#{{project_data.project_id}}" aria-expanded="false" aria-controls="{{project_data.project_id}}">
+                    {{project_data.title}}
                 </button>
             </h2>
-            <div class="accordion-collapse collapse" id="orientation-2022" data-bs-parent="#accordion-projects">
+            <div class="accordion-collapse collapse" id="{{project_data.project_id}}" data-bs-parent="#accordion-projects">
                 <div class="accordion-body">
+                    {% if project_data.description_points[0] %}
                     <div class="row">
-                        <p>The SUTD Freshmen Orientation is a programme that allows incoming Freshmore students to get to know each other and interact ahead of their academic journey in SUTD. In 2022, the theme for the orientation programme was "Multiverse Mystery", which takes place in a dinosaur multiverse.</p>
-                        <p>To reflect the orientation theme, we designed and built the website with dinosaur elements such as fossils and clawprints. To make the website more interactive, we also included a countdown timer, a responsive navigation bar, and a surprise easter egg where the information of the culprit was revealed on the last day of orientation. Figma, HTML, CSS and JavaScript were used to achieve this.</p>
-                        <p>Relevant information like registration details, directions to campus, and promotional materials are included as well.</p>
+                        {% assign num_points = project_data.description_points | size %}
+                        {% if num_points > 1 %}
+                        <ul>
+                            {% for point in project_data.description_points %}
+                            <li>{{point}}</li>
+                            {% endfor %}
+                        </ul>
+                        {% else %}
+                        <p>{{project_data.description_points[0]}}</p>
+                        {% endif %}
                     </div>
+                    {% endif %}
 
-                    <div class="row">
-                        <figure class="col-lg-6 col-xxl-4 p-2">
-                            <img src="/projects-images/orientation-figma.png" alt="Website design on Figma" class="img-fluid">
-                            <figcaption>Website design draft on Figma</figcaption>
+                    {% if project_data.images[0] %}
+                    <h5>Gallery</h5>
+                    <div class="row row-cols-2 row-cols-lg-3 row-cols-xxl-4">
+                        {% for img_data in project_data.images %}
+                        <figure class="col p-2">
+                            <a href="{{img_data.source}}" target="_blank">
+                                <img src="{{img_data.source}}" alt="{% if img_data.alt %}{{img_data.alt}}{% else %}{{img_data.caption}}{% endif %}" class="img-fluid">
+                            </a>
+                            <figcaption>{{img_data.caption}}</figcaption>
                         </figure>
-                        <figure class="col-lg-6 col-xxl-4 p-2">
-                            <img src="/projects-images/orientation-main.png" alt="Orientation website main section with countdown timer" class="img-fluid">
-                            <figcaption>Orientation website main section with countdown timer</figcaption>
-                        </figure>
-                        <figure class="col-lg-6 col-xxl-4 p-2">
-                            <img src="/projects-images/orientation-houses.png" alt="Orientation website houses section" class="img-fluid">
-                            <figcaption>Orientation website houses section</figcaption>
-                        </figure>
+                        {% endfor %}
                     </div>
+                    {% endif %}
                     
+                    {% if project_data.links[0] %}
+                    <h5>Project Links</h5>
                     <div class="row">
-                        <a href="https://github.com/LimJH272/Orientation2022" target="_blank">GitHub repository link (forked from original repository)</a>
-                        <a href="https://www.figma.com/file/J3xCDWwGgQmzho6dJHbTv2/Website-2nd-Draft?type=design&node-id=0-1&mode=design" target="_blank">Figma draft link</a>
+                        {% for link_data in project_data.links %}
+                        <a href="{{link_data.href}}" target="_blank">{{link_data.link_name}}</a>
+                        {% endfor %}
                     </div>
+                    {% endif %}
                 </div>
             </div>
         </div>
-        
-        <div class="accordion-item">
-            <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#occupeye-2023" aria-expanded="false" aria-controls="occupeye-2023">
-                    OccupEye (50.001 Information Systems & Programming 1D Project)
-                </button>
-            </h2>
-            <div class="accordion-collapse collapse" id="occupeye-2023" data-bs-parent="#accordion-projects">
-                <div class="accordion-body">
-                    <div class="row">
-                        <p>We have noticed that students tend to spend a lot of time finding a study room to use for group discussions and meetings as many of these spaces are pre-occupied. OccupEye is our solution that gives students a heads up whether a study room is vacant or occupied.</p>
-                        <p>We used Figma to prototype and design the user interface of our Android app. Using Java, we built the app and linked it to a Firebase real time database with features such as user profiles, accounts, and bookmarks. The database is also tied with an OpenCV script and Yolov5 machine learning model for object and person detection.</p>
-                        <p>Our project has won the audience's vote award during the ISTD Project Showcase 2023.</p>
-                    </div>
-
-                    <div class="row">
-                        <figure class="col-md-6 col-xxl-4 p-2">
-                            <img src="/projects-images/occupeye-figma.png" alt="App design on Figma" class="img-fluid">
-                            <figcaption>App design draft on Figma</figcaption>
-                        </figure>
-                        <figure class="col-md-6 col-xxl-4 p-2">
-                            <img src="/projects-images/occupeye-exhibition.jpg" alt="App exhibit at the ISTD Project Showcase 2023" class="img-fluid">
-                            <figcaption>App exhibit at the ISTD Project Showcase 2023</figcaption>
-                        </figure>
-                        <figure class="col-md-6 col-xxl-4 p-2">
-                            <img src="/projects-images/occupeye-group.jpg" alt="Group photo with exhibit" class="img-fluid">
-                            <figcaption>Group photo with exhibit</figcaption>
-                        </figure>
-                        <figure class="col-md-6 col-xxl-4 p-2">
-                            <img src="/projects-images/occupeye-cert.jpg" alt="Group photo for audience's vote award" class="img-fluid">
-                            <figcaption>Group photo for audience's vote award</figcaption>
-                        </figure>
-                        <figure class="col-md-12 col-xxl-8 p-2">
-                            <img src="/projects-images/occupeye-poster.png" alt="Project poster" class="img-fluid">
-                            <figcaption>Project poster</figcaption>
-                        </figure>
-                    </div>
-
-                    <!--Template-->
-                    <!-- <div class="row">
-                        <figure class="col-md-6 col-xxl-4 p-2">
-                            <img src="" alt="" class="img-fluid">
-                            <figcaption>[caption]</figcaption>
-                        </figure>
-                    </div> -->
-                    
-                    <div class="row">
-                        <a href="https://github.com/LimJH272/50001-OccupEye" target="_blank">GitHub repository link (copy from original repository due to privacy settings)</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="accordion-item">
-            <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#b3s-2023" aria-expanded="false" aria-controls="b3s-2023">
-                    B3S (50.002 Computation Structures 1D Project)
-                </button>
-            </h2>
-            <div class="accordion-collapse collapse" id="b3s-2023" data-bs-parent="#accordion-projects">
-                <div class="accordion-body">
-                    <div class="row">
-                        <p>B3S (Brain-Bending Bomb System) is a bomb defusal game built using a field programmable gate array (FPGA) and basic electronic components. Players are required to "defuse the bomb" by finishing the two minigames before the timer runs out. Making a mistake will cost you extra time and make the bomb "explode" sooner.</p>
-                        <p>Using the knowledge learnt from the Computation Structures course, we encoded our game logic using the Lucid programming language into the FPGA module. Our game utilises basic CPU architecture such as arithmetic-logic unit and control unit, as well as finite state machines to create the logical flow of the game. Input and output devices like LEDs and buttons, whose behaviours are determined by the encoded logic, are connected directly into the FPGA.</p>
-                        <p>Our game was showcased at the ISTD Project Showcase 2023 and had received much positive feedback.</p>
-                    </div>
-
-                    <div class="row">
-                        <figure class="col-md-6 col-xxl-4 p-2">
-                            <img src="/projects-images/b3s-exhibition.jpg" alt="Prototype exhibit at the ISTD Project Showcase 2023" class="img-fluid">
-                            <figcaption>Prototype exhibit at the ISTD Project Showcase 2023</figcaption>
-                        </figure>
-                        <figure class="col-md-6 col-xxl-4 p-2">
-                            <img src="/projects-images/b3s-group.jpg" alt="Group photo with prototype" class="img-fluid">
-                            <figcaption>Group photo with prototype</figcaption>
-                        </figure>
-                        <figure class="col-md-12 col-xxl-8 p-2">
-                            <img src="/projects-images/b3s-poster.jpg" alt="Project poster" class="img-fluid">
-                            <figcaption>Project poster</figcaption>
-                        </figure>
-                    </div>
-                    
-                    <div class="row">
-                        <a href="https://github.com/LimJH272/50002-1d-project-group-9" target="_blank">GitHub repository link (copy from now restricted repository)</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="accordion-item">
-            <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#this-page" aria-expanded="false" aria-controls="this-page">
-                    Personal Portfolio Site
-                </button>
-            </h2>
-            <div class="accordion-collapse collapse" id="this-page" data-bs-parent="#accordion-projects">
-                <div class="accordion-body">
-                    <div class="row">
-                        <p>This portfolio is built and hosted on GitHub Pages, and is constantly updated to reflect my milestones throughout my journey as a computer scientist.</p>
-                    </div>
-                    
-                    <div class="row">
-                        <a href="https://github.com/LimJH272/LimJH272.github.io" target="_blank">GitHub repository link</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="accordion-item">
-            <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#code_exp-2023" aria-expanded="false" aria-controls="code_exp-2023">
-                    DUOScav (DSTA BrainHack 2023, CODE_EXP Team JARV)
-                </button>
-            </h2>
-            <div class="accordion-collapse collapse" id="code_exp-2023" data-bs-parent="#accordion-projects">
-                <div class="accordion-body">
-                    <div class="row">
-                        <p>DUOScav is an application that aims to bring employees together by pairing up and completing mini challenges together to earn points.</p>
-                        <p>Employees will be randomly assigned a partner for a certain period and several tasks to complete together. Once the tasks are completed, each pair has to submit a photo as proof of completion. Employees can also compare their progress with their peers on the leaderboard and view each others' details within the company.</p>
-                        <p>Employers who act as administrators can view the employees' completed tasks and verify them to award points, as well as manage the team and task assignments for each period.</p>
-                        <p>This application was developed in conjunction with DSTA BrainHack 2023 CODE_EXP hackathon, with the theme of applying gamification to the workplace. Our solution was chosen as one of the top 25 finalists in the University/Polytechnic category.</p>
-                    </div>
-
-                    <div class="row">
-                        <figure class="col-md-12 col-xxl-6 p-2">
-                            <img src="/projects-images/codeexp-booth.jpg" alt="App showcase" class="img-fluid"/>
-                            <figcaption>App showcase at Sands Expo with team</figcaption>
-                        </figure>
-                        <figure class="col-md-12 col-xxl-6 p-2">
-                            <img src="/projects-images/codeexp-wireframe.png" alt="App wireframe" class="img-fluid"/>
-                            <figcaption>App wireframe on Figma</figcaption>
-                        </figure>
-                        <figure class="col-md-6 col-xxl-4 p-2">
-                            <img src="/projects-images/codeexp-login.png" alt="Login page" class="img-fluid"/>
-                            <figcaption>Login page of DUOScav app</figcaption>
-                        </figure>
-                        <figure class="col-md-6 col-xxl-4 p-2">
-                            <img src="/projects-images/codeexp-main.png" alt="Main screen (Tasks tab)" class="img-fluid"/>
-                            <figcaption>Tasks page of DUOScav app</figcaption>
-                        </figure>
-                        <figure class="col-md-6 col-xxl-4 p-2">
-                            <img src="/projects-images/codeexp-profile.png" alt="Main screen (Profile tab)" class="img-fluid"/>
-                            <figcaption>Profile page of DUOScav app</figcaption>
-                        </figure>
-                    </div>
-                    
-                    <div class="row">
-                        <a href="https://github.com/LimJH272/JARV-DUOScav" target="_blank">GitHub repository link</a>
-                        <a href="https://www.figma.com/file/WZqCXypVHDtMgM0YGsOreY/DUOScav-Wireframe?type=design&mode=design&t=rN99xgHyHsLh5Z7y-1" target="_blank">Figma wireframe link</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="accordion-item">
-            <h2 class="accordion-header">
-                <button class="accordion-button collapsed" id="disabled-buttons" disabled type="button" data-bs-toggle="collapse" data-bs-target="#archistyle-2023" aria-expanded="false" aria-controls="archistyle-2023">
-                    Classification of Architectural Design (UROP in progress)
-                </button>
-            </h2>
-            <div class="accordion-collapse collapse" id="archistyle-2023" data-bs-parent="#accordion-projects">
-                <div class="accordion-body">
-                    <div class="row">
-                        <p>Insert description here</p>
-                    </div>
-
-                    <div class="row container-fluid">
-                        <p>Insert screenshots here</p>
-                    </div>
-                    
-                    <div class="row">
-                        <a href="#" target="_blank">GitHub repository link</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!--Add future projects here with following template:-->
-
-        <!-- <div class="accordion-item">
-            <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#[body id]" aria-expanded="false" aria-controls="[body id]">
-                    [Insert title here]
-                </button>
-            </h2>
-            <div class="accordion-collapse collapse" id="[body id]" data-bs-parent="#accordion-projects">
-                <div class="accordion-body">
-                    <div class="row">
-                        <p>[Insert description here]</p>
-                    </div>
-
-                    <div class="row">
-                        <p>[Insert screenshots here]</p>
-                        <figure class="col-md-6 col-xxl-4 p-2">
-                            <img src="" alt="" class="img-fluid"/>
-                            <figcaption>[Image caption]</figcaption>
-                        </figure>
-                    </div>
-                    
-                    <div class="row">
-                        <a href="[insert repo url here]" target="_blank">GitHub repository link</a>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-
+        {% endfor %}
     </div>
 </div>
+{% endif %}
 

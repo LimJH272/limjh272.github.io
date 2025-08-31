@@ -1,0 +1,129 @@
+- title: SUTD Freshmen Orientation 2022 Official Website
+  project_id: orientation-2022
+  description_points:
+  - The SUTD Freshmen Orientation is a programme that allows incoming Freshmore students to get to know each other and interact ahead of their academic journey in SUTD. In 2022, the theme for the orientation programme was "Multiverse Mystery", which takes place in a dinosaur multiverse.
+  - To reflect the orientation theme, we designed and built the website with dinosaur elements such as fossils and clawprints. To make the website more interactive, we also included a countdown timer, a responsive navigation bar, and a surprise easter egg where the information of the culprit was revealed on the last day of orientation. Figma, HTML, CSS and JavaScript were used to achieve this.
+  - Relevant information like registration details, directions to campus, and promotional materials are included as well.
+  images: 
+  - source: /projects-images/orientation-figma.png
+    caption: Website design draft on Figma
+  - source: /projects-images/orientation-main.png
+    caption: Orientation website main section with countdown timer
+  - source: /projects-images/orientation-houses.png
+    caption: Orientation website houses section
+  links:
+  - href: https://github.com/LimJH272/Orientation2022
+    link_name: GitHub repository link (forked from original repository)
+  - href: https://www.figma.com/file/J3xCDWwGgQmzho6dJHbTv2/Website-2nd-Draft?type=design&node-id=0-1&mode=design
+    link_name: Figma draft link
+
+- title: OccupEye (50.001 Information Systems & Programming 1D Project)
+  project_id: occupeye-2023
+  description_points:
+  - We have noticed that students tend to spend a lot of time finding a study room to use for group discussions and meetings as many of these spaces are pre-occupied. OccupEye is our solution that gives students a heads up whether a study room is vacant or occupied.
+  - We used Figma to prototype and design the user interface of our Android app. Using Java, we built the app and linked it to a Firebase real time database with features such as user profiles, accounts, and bookmarks. The database is also tied with an OpenCV script and Yolov5 machine learning model for object and person detection.
+  - Our project has won the audience's vote award during the ISTD Project Showcase 2023.
+  images: 
+  - source: /projects-images/occupeye-figma.png
+    caption: App design draft on Figma
+  - source: /projects-images/occupeye-exhibition.jpg
+    caption: App exhibit at the ISTD Project Showcase 2023
+  - source: /projects-images/occupeye-group.jpg
+    caption: Group photo with exhibit
+  - source: /projects-images/occupeye-cert.jpg
+    caption: Group photo for audience's vote award
+  - source: /projects-images/occupeye-poster.png
+    caption: Project poster
+  links:
+  - href: https://github.com/LimJH272/50001-OccupEye
+    link_name: GitHub repository link (copy from original repository due to privacy settings)
+  - href: https://www.figma.com/design/qKN9dBxxyL3DAThGxAJ0Dm/App-Rough?node-id=0-1&t=3HaW7kBWAdqmsmyr-1
+    link_name: Figma draft link
+
+- title: B3S (50.002 Computation Structures 1D Project)
+  project_id: b3s-2023
+  description_points:
+  - B3S (Brain-Bending Bomb System) is a bomb defusal game built using a field programmable gate array (FPGA) and basic electronic components. Players are required to "defuse the bomb" by finishing the two minigames before the timer runs out. Making a mistake will cost you extra time and make the bomb "explode" sooner.
+  - Using the knowledge learnt from the Computation Structures course, we encoded our game logic using the Lucid programming language into the FPGA module. Our game utilises basic CPU architecture such as arithmetic-logic unit and control unit, as well as finite state machines to create the logical flow of the game. Input and output devices like LEDs and buttons, whose behaviours are determined by the encoded logic, are connected directly into the FPGA.
+  - Our game was showcased at the ISTD Project Showcase 2023 and had received much positive feedback.
+  images: 
+  - source: /projects-images/b3s-exhibition.jpg
+    caption: Prototype exhibit at the ISTD Project Showcase 2023
+  - source: /projects-images/b3s-group.jpg
+    caption: Group photo with prototype
+  - source: /projects-images/b3s-poster.jpg
+    caption: Project poster
+  links:
+  - href: https://github.com/LimJH272/50002-1d-project-group-9
+    link_name: GitHub repository link (copy from now restricted repository)
+
+- title: Personal Portfolio Site
+  project_id: this-page
+  description_points:
+  - This portfolio is built and hosted on GitHub Pages, and is constantly updated to reflect my milestones throughout my journey as a computer scientist.
+  links:
+  - href: https://github.com/LimJH272/limjh272.github.io
+    link_name: GitHub repository link
+
+- title: DUOScav (DSTA BrainHack 2023, CODE_EXP Team JARV)
+  project_id: code_exp-2023
+  description_points:
+  - DUOScav is an application that aims to bring employees together by pairing up and completing mini challenges together to earn points.
+  - Employees will be randomly assigned a partner for a certain period and several tasks to complete together. Once the tasks are completed, each pair has to submit a photo as proof of completion. Employees can also compare their progress with their peers on the leaderboard and view each others' details within the company.
+  - Employers who act as administrators can view the employees' completed tasks and verify them to award points, as well as manage the team and task assignments for each period.
+  - This application was developed in conjunction with DSTA BrainHack 2023 CODE_EXP hackathon, with the theme of applying gamification to the workplace. Our solution was chosen as one of the top 25 finalists in the University/Polytechnic category.
+  images: 
+  - source: /projects-images/codeexp-booth.jpg
+    caption: App showcase at Sands Expo with team
+  - source: /projects-images/codeexp-wireframe.png
+    caption: App wireframe on Figma
+  - source: /projects-images/codeexp-login.png
+    caption: Login page of DUOScav app
+  - source: /projects-images/codeexp-main.png
+    caption: Tasks page of DUOScav app
+  - source: /projects-images/codeexp-profile.png
+    caption: Profile page of DUOScav app
+  links:
+  - href: https://github.com/LimJH272/JARV-DUOScav
+    link_name: GitHub repository link
+  - href: https://www.figma.com/file/WZqCXypVHDtMgM0YGsOreY/DUOScav-Wireframe?type=design&mode=design&t=rN99xgHyHsLh5Z7y-1
+    link_name: Figma wireframe link
+
+# - title: Classification of Architectural Design
+#   project_id: archistyle-2023
+#   description_points:
+#   - A
+#   - B
+#   - C
+#   images: 
+#   - source: <path>
+#     caption: <text>
+#   - source: <path>
+#     caption: <text>
+#   - source: <path>
+#     caption: <text>
+#   links:
+#   - href: <URL>
+#     link_name: <text>
+#   - href: <URL>
+#     link_name: <text>
+
+# # Template for each project
+# - title: <Title>
+#   project_id: <title-year>
+#   description_points:
+#   - A
+#   - B
+#   - C
+#   images: 
+#   - source: <path>
+#     caption: <text>
+#   - source: <path>
+#     caption: <text>
+#   - source: <path>
+#     caption: <text>
+#   links:
+#   - href: <URL>
+#     link_name: <text>
+#   - href: <URL>
+#     link_name: <text>
