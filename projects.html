@@ -20,23 +20,17 @@ page-subtitle: Projects that I have worked on previously / working on now
             <div class="accordion-collapse collapse" id="{{project_data.project_id}}" data-bs-parent="#accordion-projects">
                 <div class="accordion-body">
                     {% if project_data.description_points[0] %}
+                    <h5>Project Description</h5>
                     <div class="row">
-                        {% assign num_points = project_data.description_points | size %}
-                        {% if num_points > 1 %}
-                        <ul>
-                            {% for point in project_data.description_points %}
-                            <li>{{point}}</li>
-                            {% endfor %}
-                        </ul>
-                        {% else %}
-                        <p>{{project_data.description_points[0]}}</p>
-                        {% endif %}
+                        {% for point in project_data.description_points %}
+                        <p>{{point}}</p>
+                        {% endfor %}
                     </div>
                     {% endif %}
 
                     {% if project_data.images[0] %}
                     <h5>Gallery</h5>
-                    <div class="row row-cols-2 row-cols-lg-3 row-cols-xxl-4">
+                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xxl-4">
                         {% for img_data in project_data.images %}
                         <figure class="col p-2">
                             <a href="{{img_data.source}}" target="_blank">
