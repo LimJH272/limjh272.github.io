@@ -13,9 +13,11 @@
     caption: Orientation website houses section
   links:
   - href: https://github.com/LimJH272/Orientation2022
-    link_name: GitHub repository link (forked from original repository)
+    link_name: GitHub repository (forked from original repository)
   - href: https://www.figma.com/file/J3xCDWwGgQmzho6dJHbTv2/Website-2nd-Draft?type=design&node-id=0-1&mode=design
-    link_name: Figma draft link
+    link_name: Figma draft
+  - href: https://darrenchanyuhao.github.io/Orientation2022/
+    link_name: Prototype site
 
 - title: OccupEye (50.001 Information Systems & Programming 1D Project)
   project_id: occupeye-2023
@@ -36,9 +38,9 @@
     caption: Project poster
   links:
   - href: https://github.com/LimJH272/50001-OccupEye
-    link_name: GitHub repository link (copy from original repository due to privacy settings)
+    link_name: GitHub repository (copy from original repository due to privacy settings)
   - href: https://www.figma.com/design/qKN9dBxxyL3DAThGxAJ0Dm/App-Rough?node-id=0-1&t=3HaW7kBWAdqmsmyr-1
-    link_name: Figma draft link
+    link_name: Figma prototype
 
 - title: B3S (50.002 Computation Structures 1D Project)
   project_id: b3s-2023
@@ -55,7 +57,7 @@
     caption: Project poster
   links:
   - href: https://github.com/LimJH272/50002-1d-project-group-9
-    link_name: GitHub repository link (copy from now restricted repository)
+    link_name: GitHub repository (copy from now restricted repository)
 
 - title: Personal Portfolio Site
   project_id: this-page
@@ -63,7 +65,7 @@
   - This portfolio is built and hosted on GitHub Pages, and is constantly updated to reflect my milestones throughout my journey as a computer scientist.
   links:
   - href: https://github.com/LimJH272/limjh272.github.io
-    link_name: GitHub repository link
+    link_name: GitHub repository
 
 - title: DUOScav (DSTA BrainHack 2023, CODE_EXP Team JARV)
   project_id: code_exp-2023
@@ -85,9 +87,9 @@
     caption: Profile page of DUOScav app
   links:
   - href: https://github.com/LimJH272/JARV-DUOScav
-    link_name: GitHub repository link
+    link_name: GitHub repository
   - href: https://www.figma.com/file/WZqCXypVHDtMgM0YGsOreY/DUOScav-Wireframe?type=design&mode=design&t=rN99xgHyHsLh5Z7y-1
-    link_name: Figma wireframe link
+    link_name: Figma wireframe
 
 # - title: Classification of Architectural Design
 #   project_id: archistyle-2023
