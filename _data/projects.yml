@@ -59,14 +59,6 @@
   - href: https://github.com/LimJH272/50002-1d-project-group-9
     link_name: GitHub repository (copy from now restricted repository)
 
-- title: Personal Portfolio Site
-  project_id: this-page
-  description_points:
-  - This portfolio is built and hosted on GitHub Pages, and is constantly updated to reflect my milestones throughout my journey as a computer scientist.
-  links:
-  - href: https://github.com/LimJH272/limjh272.github.io
-    link_name: GitHub repository
-
 - title: DUOScav (DSTA BrainHack 2023, CODE_EXP Team JARV)
   project_id: code_exp-2023
   description_points:

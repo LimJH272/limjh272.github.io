@@ -1,77 +1,89 @@
 <!DOCTYPE html>
 
 <html>
-    <head>
-        <!-- Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id={{site.google_analytics}}"></script>
-        <script>
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{site.google_analytics}}"></script>
+    <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+        function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
 
         gtag('config', '{{site.google_analytics}}');
-        </script>
-        <title>{% if page.title %}{{page.title}} | {% endif %}Lim Jie Han's Portfolio</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="/styles.css" rel="stylesheet">
-        <link rel="icon" type="image/x-icon" href="/LJH-favicon.jpg">
+    </script>
+    <title>{% if page.title %}{{page.title}} | {% endif %}Lim Jie Han's Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="/styles.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="/LJH-favicon.jpg">
 
-        <!--Bootstrap 5 setup-->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-    </head>
+    <!--Bootstrap 5 setup-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</head>
 
-    <body>
-        <!-- Navbar -->
-        {% include nav.html fixed=true %}
+<body>
+    <!-- Navbar -->
+    {% include nav.html fixed=true %}
 
-        <!--Duplicate navbar to align page content-->
-        {% include nav.html %}
+    <!--Duplicate navbar to align page content-->
+    {% include nav.html %}
 
-        <!-- Main content -->
-        <div id="main-content">
-            <div class="container-fluid py-2 text-center">
-                <h1>{{page.page-title}}</h1>
-                <p>{{page.page-subtitle}}</p>
-            </div>
-            {{content}}
+    <!-- Main content -->
+    <div id="main-content">
+        <div class="container-fluid py-2 text-center">
+            <h1>{{page.page-title}}</h1>
+            <p>{{page.page-subtitle}}</p>
         </div>
+        {{content}}
+    </div>
 
-        <!-- Footer -->
-        <footer>
-            <div class="container">
-                <div class="row">
-                    <div class="col col-md-8">
-                        <div class="p-20">
-                            <h4>Lim Jie Han's Portfolio</h4>
-                            <span class="text-muted" style="font-size: 0.8em;">This site is published using <a href="https://docs.github.com/en/pages" target="_blank">GitHub Pages</a> powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a>, and uses <a href="https://getbootstrap.com/" target="_blank">Bootstrap 5</a>.</span>
-                        </div>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col col-md-8">
+                    <div class="p-20">
+                        <h4>Lim Jie Han's Portfolio</h4>
+                        <span style="font-size: 0.9em;"><a href="https://github.com/LimJH272/limjh272.github.io"
+                                target="_blank" class="text-muted">Source Code</a></span><br><br>
+                        <span class="text-muted" style="font-size: 0.8em;">This site is published using <a
+                                href="https://docs.github.com/en/pages" target="_blank" class="text-muted">GitHub
+                                Pages</a> powered by <a href="https://jekyllrb.com/" target="_blank"
+                                class="text-muted">Jekyll</a>, and
+                            uses <a href="https://getbootstrap.com/" target="_blank" class="text-muted">Bootstrap 5</a>.
+                        </span>
                     </div>
-                    {% if site.data.contacts[0] %}
-                    <div class="col col-md-4">
-                        <div class="row">
-                            <div class="col">
-                                <div class="col p-20">
-                                    <h5>Connect via:</h5>
-                                </div>
-                            </div>
-                        </div>
-                        {% for contact in site.data.contacts %}
-                        <div class="row">
-                            <div class="col">
-                                <div class="col p-10">
-                                    <a class="text-black-50" href="{{contact.link}}" target="_blank">{{contact.name}}</a>
-                                </div>
-                            </div>
-                        </div>
-                        {% endfor %}
-                    </div>
-                    {% endif %}
                 </div>
+                {% if site.data.contacts[0] %}
+                <div class="col col-md-4">
+                    <div class="row">
+                        <div class="col">
+                            <div class="col p-20">
+                                <h5>Connect via:</h5>
+                            </div>
+                        </div>
+                    </div>
+                    {% for contact in site.data.contacts %}
+                    <div class="row">
+                        <div class="col">
+                            <div class="col p-10">
+                                <a class="text-black-50" href="{{contact.link}}" target="_blank">{{contact.name}}</a>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                {% endif %}
             </div>
-        </footer>
+        </div>
+    </footer>
 
-        <script src="/myscripts.js"></script>
-    </body>
+    <script src="/myscripts.js"></script>
+</body>
+
 </html>
