@@ -32,9 +32,9 @@
 
                     {% if data_entry.images[0] %}
                     <h5>Gallery</h5>
-                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xxl-4">
+                    <div class="row row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xxl-4 g-3">
                         {% for img_data in data_entry.images %}
-                        <figure class="col p-2">
+                        <figure class="col">
                             <!-- Button trigger modal -->
                             <button type="button" class="btn" data-bs-toggle="modal"
                                 data-bs-target="#{{data_entry.data_id}}-{{forloop.index}}-Modal">
