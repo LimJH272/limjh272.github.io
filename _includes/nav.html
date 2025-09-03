@@ -2,14 +2,16 @@
     <div class="container-fluid">
         <a href="/" class="navbar-brand">Lim Jie Han's Portfolio</a>
         {% if site.data.navigation[0] %}
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav ms-auto">
                 {% for p in site.data.navigation %}
                 <li class="nav-item">
-                    <a class="nav-link text-center{% if page.title == p.title %} active{% endif %}"{% if page.title == p.title %} aria-current="page"{% endif %} href="{{p.permalink}}">{{p.title}}</a>
+                    <a class="nav-link text-center{% if page.permalink == p.permalink %} active{% endif %}" {% if
+                        page.title==p.title %} aria-current="page" {% endif %} href="{{p.permalink}}">{{p.title}}</a>
                 </li>
                 {% endfor %}
                 <!-- <li class="nav-item">

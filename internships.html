@@ -1,0 +1,47 @@
+---
+layout: default
+title: Internships
+permalink: /internships/
+
+page-title: Internship Experiences
+page-subtitle: Internships that had shaped who I am today
+---
+
+{% if site.data.internships[0] %}
+<div class="container py-1" id="internship-content">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xxl-4 g-3">
+        {% for internship_data in site.data.internships %}
+        <div class="col">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="mb-0 text-primary d-grid gap-2">
+                        <button class="btn text-start" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#{{internship_data.internship_id}}" aria-expanded="false"
+                            aria-controls="{{internship_data.internship_id}}">
+                            <h4 class="card-title">{{internship_data.title}}</h4>
+                            <h6>{{internship_data.company}}, <em>{{internship_data.country}}</em></h6>
+                            <p class="card-text">{{internship_data.start_date | date: "%-d %B %Y" | default: ""}} ~
+                                {{internship_data.end_date | date: "%-d %B %Y" | default: "Present"}}</p>
+                        </button>
+                    </h5>
+                </div>
+
+                <div id="{{internship_data.internship_id}}" class="collapse">
+                    <div class="card-body">
+                        <div class="row">
+                            {% if internship_data.description_points[0] %}
+                            <ul style="list-style-position: inside;">
+                                {% for point in internship_data.description_points %}
+                                <li class="ps-4" style="text-indent: -1.5em;">{{point}}</li>
+                                {% endfor %}
+                            </ul>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endif %}
