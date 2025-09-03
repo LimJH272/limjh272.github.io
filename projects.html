@@ -7,90 +7,12 @@ page-title: My Projects
 page-subtitle: Projects that I have worked on previously / working on now
 ---
 
-{% if site.data.projects[0] %}
-<div class="container" id="projects">
-    <div class="accordion accordion-flush" id="accordion-projects">
-        {% for project_data in site.data.projects %}
-        <div class="accordion-item">
-            <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#{{project_data.project_id}}" aria-expanded="false"
-                    aria-controls="{{project_data.project_id}}">
-                    {{project_data.title}}
-                </button>
-            </h2>
-            <div class="accordion-collapse collapse" id="{{project_data.project_id}}"
-                data-bs-parent="#accordion-projects">
-                <div class="accordion-body">
-                    {% if project_data.description_points[0] %}
-                    <h5>Project Description</h5>
-                    <div class="row">
-                        {% for point in project_data.description_points %}
-                        <p>{{point}}</p>
-                        {% endfor %}
-                    </div>
-                    {% endif %}
+{% for project_list in site.data.projects %}
 
-                    {% if project_data.images[0] %}
-                    <h5>Gallery</h5>
-                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xxl-4">
-                        {% for img_data in project_data.images %}
-                        <figure class="col p-2">
-                            <!-- Button trigger modal -->
-                            <button type="button" class="btn" data-bs-toggle="modal"
-                                data-bs-target="#{{project_data.project_id}}-{{forloop.index}}-Modal">
-                                <img src="{{img_data.source}}" alt="{{img_data.alt | default: img_data.caption}}"
-                                    class="img-fluid img-thumbnail">
-                                <figcaption style="font-size: 0.8em;">{{img_data.caption}}</figcaption>
-                            </button>
+{% assign idx = forloop.index0 %}
 
-                            <!-- Modal -->
-                            <div class="modal fade image-modal" id="{{project_data.project_id}}-{{forloop.index}}-Modal"
-                                tabindex="-1" aria-labelledby="{{project_data.project_id}}-{{forloop.index}}-ModalLabel"
-                                aria-hidden="true">
-                                <div class="modal-dialog modal-dialog-centered mx-auto" data-bs-dismiss="modal"
-                                    aria-label="Close">
-                                    <div class="modal-content">
-                                        <div class="modal-body text-center">
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                aria-label="Close"></button>
-                                            <a href="{{img_data.source}}" target="_blank">
-                                                <img src="{{img_data.source}}"
-                                                    alt="{{img_data.alt | default: img_data.caption}}" class="img-fluid"
-                                                    style="max-width: 85vw; max-height: 85vh;">
-                                            </a>
-                                            <br>
-                                            <div
-                                                style="background-color: white; border-radius: 10px; display: inline-block;">
-                                                <span class="p-1 px-2 text-center"
-                                                    style="font-size: 0.6em; display: block;">Click on
-                                                    image to view in full resolution</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </figure>
-                        {% endfor %}
-                    </div>
-                    {% endif %}
+<h2 class="pt-3 ps-3">{{project_list.list_name}}</h2>
+{% include project_accordion_list.html list_data=project_list.list_data list_idx=idx
+content_file="project_accordion_content.html" %}
 
-                    {% if project_data.links[0] %}
-                    <h5>Project Links</h5>
-                    <div class="row">
-                        <ul>
-                            {% for link_data in project_data.links %}
-                            <li style="list-style-position: inside;">
-                                <a href="{{link_data.href}}" target="_blank">{{link_data.link_name}}</a>
-                            </li>
-                            {% endfor %}
-                        </ul>
-                    </div>
-                    {% endif %}
-                </div>
-            </div>
-        </div>
-        {% endfor %}
-    </div>
-</div>
-{% endif %}
+{% endfor %}
